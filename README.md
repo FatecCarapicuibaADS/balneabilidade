@@ -4,7 +4,7 @@ Projeto dirigido pelo professor Luquini na disciplina de Programação para Disp
 **URL para instalar o Git em sua máquina:**
 https://git-scm.com/downloads
 
-**URL de download do GitKraken: **
+**URL de download do GitKraken:**
 https://www.gitkraken.com/download
 
 Faremos uso da ferramenta **"Git Flow"** como modelo de organização de branches.
