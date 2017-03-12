@@ -14,4 +14,6 @@ Faremos uso da ferramenta **"Git Flow"** como modelo de organização de branche
 - Não altere e nem remova o arquivo ".gitignore".
 - Não faça nenhuma alteração no código dentro das branches "master" e "develop".
 
-Qualquer problema ou dúvida pode nos contatar
+Qualquer problema ou dúvida pode nos contatar:
+jonatas.nardi@gmail.com
+liuurt@gmail.com
