@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ecoponto</title>
+	<link rel="stylesheet" href="css/jqm/jquery.mobile-1.4.5.min.css" />	
+	<link rel="stylesheet" href="css/jqm/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/lista.css" />
+	<link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="css/jqm/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="js/jqm/jquery.js"></script>
+	<script src="js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jqm/mustache.min.js"></script>
+	<script id="template" type="x-tmpl-mustache">
+		{{ #praias }}				
+				<li>
+					{{Praia}} &nbsp; {{Posicao}} &nbsp; {{Qualidade}} 
+				</li>			
+		{{ /praias }}		
+	</script>
+	<script>
+	$(document).on("pagecontainershow", function (e, ui) {	
+		 executarTemplate();				    
+	});
+
+	var tmp = {};
+	function executarTemplate(){
+		$.getJSON('http://www.fbelisario.com/data.php',
+			function onFileLoad(praias) {
+			var dados = {praias:[]};
+			dados.praias = praias;
+			var template = $('#template').html();
+			var novoHtml = Mustache.to_html(template, dados);
+			$('#lstview').html(novoHtml);
+			$('#lstview').listview("refresh");
+		});
+		
+	}	
+
+	</script>
+</head>
+<body>
+	<div data-role="page">
+		<style>			
+			.input-custom {
+		          margin:-7px auto 5px auto;
+			  width:80%; 	 
+                          border: none;
+			  box-shadow:none;	  
+			  border-radius:5px;
+			  font-size:16px;
+			}
+		</style>
+		<div data-role="header" data-position="fixed" data-hide-during-focus="false" data-tap-toggle="false">
+			<h1 style="margin:auto">Preços Ceagesp</h1>
+			<form style="margin:3px 0px">
+				<input id="inSearch" data-type="search" class="ui-input-search" type="text"  placeholder="digitar alface, por exemplo" value=""  data-wrapper-class="input-custom" />			
+			</form>	
+		</div>
+		<div role="main">
+			<ul id="lstview" data-role="listview" data-filter="true" data-input="#inSearch">
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
