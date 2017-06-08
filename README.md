@@ -1,19 +1,10 @@
 # Projeto Balneabilidade
 Projeto dirigido pelo professor Luquini na disciplina de Programação para Dispositivos Móveis da Fatec Carapicuíba.
+    - Criação do app.
+  - **1.0.0**
 
-**URL para instalar o Git em sua máquina:** <br />
-https://git-scm.com/downloads
 
-**URL de download do GitKraken:** <br />
-https://www.gitkraken.com/download
+### Versão
+  - 1.0.0
 
-Faremos uso da ferramenta **"Git Flow"** como modelo de organização de branches.
-
-**Algumas regras importantes para uma boa organização do nosso projeto:**
-- Crie sua própria feature para desenvolver.
-- Não altere e nem remova o arquivo ".gitignore".
-- Não faça nenhuma alteração no código dentro das branches "master" e "develop".
-
-Qualquer problema ou dúvida pode nos contatar:<br />
-jonatas.nardi@gmail.com<br />
-liuurt@gmail.com
+### Release notes   
